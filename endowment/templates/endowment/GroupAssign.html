@@ -1,0 +1,39 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree %}
+
+{% block title %}
+    Group assign
+{% endblock %}
+
+{% block content %}
+    {% if player.id_in_group == 1 %}
+        <p>You are now the proud owner of a new Pilot G2 07 Gel Ink Roller-ball Pen!</p>
+        <p>
+            <img src="https://officedepot.scene7.com/is/image/officedepot/790761_p_1?$OD%2DLarge$&wid=450&hei=450">
+        </p>
+        <p>The Pilot G2 07 is a smooth-writing retractable gel roller-ball with a comfortable cushion grip and archival acid-free ink - a renowned best-seller all over the world. 0.7mm ball writes a 0.39mm line.</p>
+    {% endif %}
+    {% if player.id_in_group == 2 %}
+        <p>You are now the proud owner of a new Oreo Chocolate Candy Bar!</p>
+        <p>
+            <img src="https://fortunedotcom.files.wordpress.com/2016/11/milka-oreo-chocolate-candy-bar-3-52oz.png" width="800" height="320">
+        </p>
+        <p>The Oreo Chocolate Candy Bar, no words are needed - it is delicious!</p>
+    {% endif %}
+    {% if player.id_in_group == 3 %}
+        <p>You are now the proud owner of a both a new Pilot G2 07 Gel Ink Roller-ball Pen and a new Oreo Chocolate Candy Bar!</p>
+        <p align="center">
+            <img src="https://fortunedotcom.files.wordpress.com/2016/11/milka-oreo-chocolate-candy-bar-3-52oz.png" width="800" height="320">
+            <img src="https://officedepot.scene7.com/is/image/officedepot/790761_p_1?$OD%2DLarge$&wid=450&hei=450">
+        </p>
+        <p>The Pilot G2 07 is a smooth-writing retractable gel roller-ball with a comfortable cushion grip and archival acid-free ink - a renowned best-seller all over the world. 0.7mm ball writes a 0.39mm line.</p>
+        <p>The Oreo Chocolate Candy Bar, no words are needed - it is delicious!</p>
+    {% endif %}
+    {% if player.id_in_group == 4 %}
+        <p>Unfortunately, you will not get any of the items. But, we still have a question for you.</p>
+    {% endif %}
+    <p>
+        {% next_button %}
+    </p>
+{{ form.errors }}
+{% endblock %}
